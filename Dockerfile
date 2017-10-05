@@ -12,10 +12,10 @@ RUN npm install -g grunt-cli
 RUN npm install
 RUN sed -i "s/port: port/port: port,\n\t\t\t\t\thostname: \'\'/g" Gruntfile.js
 
-# Install wetty
-RUN git clone https://github.com/krishnasrinivas/wetty
-WORKDIR /opt/presentation/wetty
-RUN npm install
+# # Install wetty
+# RUN git clone https://github.com/krishnasrinivas/wetty
+# WORKDIR /opt/presentation/wetty
+# RUN npm install
 
 # Add content
 # ADD docker.css /opt/presentation/css/theme/docker.css
