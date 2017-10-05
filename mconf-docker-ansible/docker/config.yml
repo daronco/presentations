@@ -1,0 +1,7 @@
+some:
+  one: 1
+  other: 9
+an_array: [1, 2, 3]
+more_things:
+  pt: 'pt-BR'
+  en: 'en'

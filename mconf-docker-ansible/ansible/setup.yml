@@ -1,0 +1,33 @@
+- name: Do some stuff to setup the server
+  hosts: all
+
+  vars:
+    deploy_user: mconf
+
+  tasks:
+
+    - name: Create remote user
+      become: true
+      user:
+        name: '{{ deploy_user }}'
+        shell: /bin/bash
+        groups: adm,sudo,syslog,users
+        append: yes
+
+    - name: Set up authorized keys
+      become: true
+      authorized_key:
+        user: '{{ deploy_user }}'
+        state: present
+        key: '{{ item }}'
+      with_file:
+        - /home/daronco/.ssh/id_rsa.pub
+
+    - name: Add to sudoers
+      become: true
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: '^{{ deploy_user }}\s'
+        line: '{{ deploy_user }} ALL=(ALL) NOPASSWD: ALL'
+        validate: 'visudo -cf %s'
