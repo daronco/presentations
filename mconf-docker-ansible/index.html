@@ -80,7 +80,7 @@
 
         <section data-background="#c94a56" data-transition="zoom-in slide-out" data-transition-speed="slow" data-fullscreen>
             <canvas id="confetti" style="position:fixed;left:0;top:0;right:0;bottom:0;"></canvas>
-            <img width="2440" height="1942" data-src="images/bonito.png" alt="Petersen" style="border:none;box-shadow:none;background:none;height:100%;">
+            <img width="2440" height="1942" data-src="images/bonito.png" alt="BONITO" style="border:none;box-shadow:none;background:none;height:100%;">
 				</section>
 
         <section>
@@ -120,7 +120,7 @@
   		  <section data-background-color="white"> <img src="images/container-vm.png" style="border:0;box-shadow:none;" /></section>
 
         <section>
-            <h2>Pontos importantes</h2>
+            <h2>Pontos fortes</h2>
             <ul><small>
                 <li>Isola dependências (elimina conflitos)</li>
                 <li>Portável</li>
@@ -128,6 +128,7 @@
                 <li>Automação, repetição</li>
                 <li>Reduz inconsistências dev, test, prod</li>
             </small></ul>
+            <img width="250" height="259" data-src="images/forte.png" alt="FORTE" style="border:none;box-shadow:none;background:none;position:fixed;right:0;bottom:0;">
         </section>
 
         <section>
@@ -145,9 +146,16 @@
             </small></ul>
         </section>
 
-        <section data-background="images/demo.gif">
-            <h1 style="margin-top:40%;margin-left:50px;text-align:left;">DEMO</h1>
+        <section data-background-video="images/polo-hands-nosound.mp4" data-background-video-loop="loop" data-background-color="#000">
+            <!-- <h1 style="margin-top:40%;margin-left:50px;text-align:left;" class="fragment">DEMO</h1> -->
         </section>
+
+        <section data-background="images/demons.jpg" data-background-color="#000">
+            <h1 style="margin-bottom:30%;text-align:center;color:red;text-shadow:2px 2px 2px orange;">DEMO</h1>
+        </section>
+        <!-- <section data-background="images/demo.gif">
+             <h1 style="margin-top:40%;margin-left:50px;text-align:left;">DEMO</h1>
+             </section> -->
 
         <section>
             <img src="images/ansible.png" style="border:0;box-shadow:none;background:none;max-width:200px;" />
@@ -167,6 +175,10 @@
 
         <section data-background="images/demo2.gif">
             <h1 style="margin-bottom:40%;text-align:right;text-shadow:1px 1px 1px black;margin-right:50px;">DEMO</h1>
+        </section>
+
+        <section data-background-video="images/polo-cry-nosound.mp4" data-background-video-loop="loop" data-background-color="#000">
+            <h1 style="margin-top:40%;margin-left:50px;text-align:left;">FIM :'(</h1>
         </section>
 
 			</div>
@@ -347,8 +359,7 @@
 					   { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					   { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					   { src: 'plugin/zoom-js/zoom.js', async: true },
-					   { src: 'plugin/notes/notes.js', async: true },
-					   { src: 'plugins/fullscreen.js', async: true }
+					   { src: 'plugin/notes/notes.js', async: true }
 				 ]
 		 });
 
